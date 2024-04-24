@@ -1,4 +1,4 @@
-# GROUP-NAME - lab NUMBER - variant NUMBER
+# BABLE - lab 2 - variant 4
 
 This is an example project which demonstrates project structure and necessary
 CI checks. It is not the best structure for real-world projects, but good
@@ -6,9 +6,9 @@ enough for educational purposes.
 
 ## Project structure
 
-- `foo.py` -- implementation of `Foo` class with `hello` and `add` features.
+- `hash.py` -- implementation of `Foo` class with `hello` and `add` features.
    Stateless.
-- `foo_test.py` -- unit and PBT tests for `Foo`.
+- `hash_test.py` -- unit and PBT tests for `Foo`.
 
 ## Features
 
@@ -16,16 +16,11 @@ enough for educational purposes.
 
 ## Contribution
 
-- Aleksandr Penskoi (EMAIL) -- all work.
+- He Jian(StellAr117)
 
 ## Changelog
 
-- 29.03.2022 - 2
-  - Add test coverage.
-- 29.03.2022 - 1
-  - Update README. Add formal sections.
-- 29.03.2022 - 0
-  - Initial
+- 2024.4.24 creat project    
 
 ## Design notes
 
