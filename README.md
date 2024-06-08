@@ -1,18 +1,16 @@
 # BABLE - lab 2 - variant 4
 
-This is an example project which demonstrates project structure and necessary
-CI checks. It is not the best structure for real-world projects, but good
-enough for educational purposes.
+
 
 ## Project structure
 
-- `hash.py` -- implementation of `Foo` class with `hello` and `add` features.
-   Stateless.
-- `hash_test.py` -- unit and PBT tests for `Foo`.
+- `HMSeparateChaining.py` -- implementation of `HMSeparateChainingSet` class with cons, length,  
+    remove, member, to_list, from_list, concat, intersection, empty, reduce, tmap, filter features.
+  
+- `HMSeparateChainingSet_test` -- unit and PBT tests for `HMSeparateChaining.py`.
 
 ## Features
 
-- PBT: `test_add_commutative`
 
 ## Contribution
 
@@ -20,6 +18,8 @@ enough for educational purposes.
 
 ## Changelog
 
+- 2024.6.8 v1.1 Deleted Chinese comments and improved the README file   
+- 2024.5.23 This solves most of the problems, but uses internal methods instead of functions    
 - 2024.4.24 creat project    
 
 ## Design notes
