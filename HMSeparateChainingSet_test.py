@@ -1,7 +1,5 @@
 import unittest
 import itertools
-from hypothesis import given
-import hypothesis.strategies as st
 from HMSeparateChainingSet import HMSeparateChainingSet, cons
 
 
