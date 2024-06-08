@@ -86,7 +86,7 @@ def member(key, hm):
 def to_list(hm):
     """Convert the linked list to a Python list"""
     lst = []
-    current = hm.head if isinstance(hm, HMSeparateChainingSet) else hm  # 修正这里
+    current = hm.head if isinstance(hm, HMSeparateChainingSet) else hm  
     while current:
         lst.append(current.key)
         current = current.next
