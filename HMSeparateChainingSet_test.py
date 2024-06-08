@@ -1,6 +1,8 @@
 import unittest
 import itertools
-from HMSeparateChainingSet import HMSeparateChainingSet, cons
+from HMSeparateChaining import HMSeparateChainingSet, cons, length,\
+    remove, member, to_list, from_list, concat, intersection,\
+    empty, reduce, tmap, filter
 
 
 class TestHMSeparateChainingSet(unittest.TestCase):
@@ -52,23 +54,26 @@ class TestHMSeparateChainingSet(unittest.TestCase):
         self.assertEqual(lst, [])
 
     def test_empty(self):
-        empty = HMSeparateChainingSet.empty()
-        self.assertEqual(str(empty), "{}")
-        self.assertEqual(empty.length(), 0)
+        empty_set = empty()
+        self.assertEqual(str(empty_set), "{}")
+        self.assertIsNone(empty_set.head)
 
     def test_filter(self):
-        l1 = HMSeparateChainingSet.from_list([None, 1])
-        filtered = l1.filter(lambda x: x is not None)
-        self.assertEqual(filtered.to_list(), [1])
+        l1 = from_list([None, 1])
+        if l1 and hasattr(l1, 'head'):
+            filtered = filter(l1.head, lambda x: x is not None)
+        else:
+            filtered = None
+        self.assertEqual(to_list(filtered), [1])
 
     def test_map(self):
-        l1 = HMSeparateChainingSet.from_list([1, 2])
-        mapped = l1.map(lambda k, v: (k, v + 1))
-        self.assertTrue(mapped.to_list() == [(1, 2), (2, 3)])
+        l1 = from_list([1, 2])
+        mapped = tmap(l1, lambda k: (k, k + 1))
+        self.assertEqual(to_list(mapped), [(1, 2), (2, 3)])
 
     def test_reduce(self):
-        l1 = HMSeparateChainingSet.from_list([1, 2])
-        result = l1.reduce(lambda acc, v: acc + v, 0)
+        l1 = from_list([1, 2])
+        result = reduce(l1, lambda acc, v: acc + v, 0)
         self.assertEqual(result, 3)
 
 
